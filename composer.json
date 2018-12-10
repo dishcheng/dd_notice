@@ -1,0 +1,37 @@
+{
+  "name": "dishcheng/dd_notice",
+  "description": "网易云短信包",
+  "keywords": [
+    "叮叮",
+    "推送",
+    "通知",
+    "机器人"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "caicheng",
+      "email": "251329204@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "laravel/framework": ">=5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "DishCheng\\DdNotice\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DishCheng\\DdNotice\\DdNoticeProvider"
+      ],
+      "aliases": {
+        "DdNotice": "DishCheng\\DdNotice\\DdNotice"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}
