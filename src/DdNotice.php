@@ -4,6 +4,7 @@ namespace DishCheng\DdNotice;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Created by PhpStorm.
@@ -30,7 +31,7 @@ class DdNotice extends Facade
                 return $res->getBody();
             }
         } catch (\GuzzleHttp\Exception\GuzzleException $exception) {
-            \Log::error(json_encode($exception->getMessage()));
+            Log::error(json_encode($exception->getMessage()));
         }
     }
 }
